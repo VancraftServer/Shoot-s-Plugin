@@ -1,4 +1,4 @@
-# Shoot-s-Plugin
+# Shoot's-Plugin
 #### 功能：
 1. 快捷的重启命令  
 2. 使用&的彩色聊天  
