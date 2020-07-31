@@ -148,6 +148,15 @@ def on_info(server, info):
 
 def on_player_made_advancement(server, player, advancement):
     server.say('§d恭喜§4' + player + '§d获得进度：§2§l"' + advancement + '"')
+    msg = '恭喜' + player + '获得进度："' + advancement + '"'
+    ChatAPI = server.get_plugin_instance('MCDR-CHA-ChatAPI')
+    ChatAPI.seed_group_message(default_group_id, msg, False)
+
+
+def on_death_message(server, death_message):
+    server.say('§4§l' + death_message)
+    ChatAPI = server.get_plugin_instance('MCDR-CHA-ChatAPI')
+    ChatAPI.seed_group_message(default_group_id, death_message, False)
 
 
 def on_load(server, old_module):
